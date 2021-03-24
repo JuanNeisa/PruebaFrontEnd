@@ -1,1 +1,32 @@
-<p>listar works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Calificacion</th>
+                <th scope="col">Pais</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Duro de matar</th>
+                <td>9/10</td>
+                <td>Estados Unidos</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+            <tr *ngFor="let pelicula of moviesService.peliculas">
+                <td>{{ pelicula.titulo }}</td>
+                <td>{{ pelicula.calificacion }}</td>
+                <td>{{ pelicula.pais }}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

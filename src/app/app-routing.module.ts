@@ -18,7 +18,8 @@ const routes: Routes = [
   path:'top',loadChildren: ()=>
   import('./Componentes/modulo2/top/top.module').then(m=>m.TopModule)
 },
-{ path: '', redirectTo: 'buscar', pathMatch: 'full' }
+{ path: '', redirectTo: '', pathMatch: 'full' },
+{ path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
