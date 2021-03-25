@@ -19,12 +19,23 @@ export class MoviesService {
 
   constructor(public http: HttpClient){}
 
+  /* servicio: [get] backendUrl + /movies */
   getMovies(){
     return this.http.get<Movies[]>(this.URL+'/movies');
   }
 
+  /* servicio: [post] backendUrl + /movies */
   createMovie(movie : Movies){
     return this.http.post(this.URL+'/movies', movie)
   }
+
+  /* servicio: [delete] backendUrl + /movies:id */
+  deleteMovie(id : string){
+    return this.http.delete(this.URL+'/movies/:id')
+  }
+
+  /* editMovie(movie : Movies){
+    return this.http.put(this.URL+'/movies/:id')
+  } */
 
 }

@@ -18,7 +18,10 @@ export class AgregarComponent implements OnInit {
   addMovie(form: NgForm) {
     //console.log(form.value)
     this.moviesService.createMovie(form.value).subscribe(
-      res => console.log(res),
+      res => {
+        console.log(res)
+        alert('Pelicula agregada')
+      },
       err => console.error(err)
     )
   }
