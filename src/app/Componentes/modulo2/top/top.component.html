@@ -1,1 +1,19 @@
-<p>top works!</p>
+<!-- *ngFor="let pelicula of moviesService.peliculas" -->
+<h1>Top 5 Peliculas mejor rankeadas</h1>
+
+<div class="container">
+    <div class="card mb-3 p-1" style="max-width: 540px;" *ngFor="let pelicula of moviesService.top">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://picsum.photos/200" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{pelicula.titulo}}</h5>
+                    <p class="card-text">Calificacion: {{pelicula.calificacion}}</p>
+                    <p class="card-text">Pais: {{pelicula.pais}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

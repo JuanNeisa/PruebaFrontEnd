@@ -16,12 +16,18 @@ export class MoviesService {
   };
 
   peliculas : Movies[];
+  top : Movies[];
 
   constructor(public http: HttpClient){}
 
   /* servicio: [get] backendUrl + /movies */
   getMovies(){
     return this.http.get<Movies[]>(this.URL+'/movies');
+  }
+
+  /* servicio: [get] backendUrl + /top */
+  getTop(){
+    return this.http.get<Movies[]>(this.URL+'/top');
   }
 
   /* servicio: [post] backendUrl + /movies */

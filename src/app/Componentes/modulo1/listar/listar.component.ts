@@ -18,12 +18,12 @@ export class ListarComponent implements OnInit {
   }
 
   getMovies(){
-    console.log(this.moviesService.getMovies().subscribe(
+    this.moviesService.getMovies().subscribe(
       res => {
         this.moviesService.peliculas = res;
       },
       err => console.error(err)
-    ));
+    );
   }
 
   deleteMovie(id:string){
